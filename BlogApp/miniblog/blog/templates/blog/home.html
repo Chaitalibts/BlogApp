@@ -1,0 +1,81 @@
+{% extends 'blog/base.html' %} {% load static %} {% block content %}
+
+<section>
+<h1 class="text-center m-2 p-2">Publish your passions, your way <br /><a class="btn btn-danger btn-xl p-2 m-2" href="{% url 'dashboard' %}" role="button">Create Blog</a></h1>
+
+
+  <div style="padding: 2rem;">
+    <div
+      style="
+    
+        background-color: #2e3267;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: 2rem;
+        height: 30rem;
+        margin: 3rem auto;
+        border-radius: 10%;
+      "
+    >
+      <aside
+        style="
+          position: relative;
+          bottom: 7rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+      <div style="height:25rem;">
+      <img src="{% static 'blog/images/home1.jpg' %}" alt="" style="width:100%;height:100%;border-radius:10%;"><h3 class="p-4 m-5">Write a Posts</h3></div>
+      </aside>
+
+      <aside
+        style="
+          position: relative;
+          top: 0.2rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+      
+      <div style="height:25rem;">
+        <h3 class="p-6 m-5">Join millions of others</h3>
+        <img src="{% static 'blog/images/home2.jpg' %}" alt="" style="width:100%;height:100%;border-radius:10%;"></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+  <div
+    class="p-5 "
+    style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem"
+  >
+    {% for post in posts %}
+
+    <div class="jumbo-color m-4">
+      
+      <div class="card-body">
+        <h1 class="card-title font-weight-bold p-2">{{post.title}}</h1>
+
+        <div style="height:12rem;width:18rem;"><img
+          class="card-img-top rounded"
+          src="{{post.image.url}}"
+          alt="Card image cap"
+          style="width:100%%;height:100%;"
+        /></div>
+
+        <p class="m-2">{{post.category}}</p>
+
+        <a href="{% url 'post' %}" class="btn btn-danger">Read More</a>
+      </div>
+    </div>
+
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock content %}

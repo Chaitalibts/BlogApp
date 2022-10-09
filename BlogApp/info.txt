@@ -1,0 +1,4 @@
+This is the blog application where we can write, read blogs. 
+if you have to write a blog then you have to signup and login to your account.
+you can see all blogs on home page if you have to read more then click on read more.
+in posts page you can read full blog.

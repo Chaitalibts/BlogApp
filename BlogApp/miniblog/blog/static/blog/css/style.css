@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.7;
+  color: white;
+  background-color: #1f2641;
+}
+
+/* navbar=================================================== */
+nav {
+  background-color: #2a2e5f;
+  width: 100vw;
+  height: 5rem;
+  position: fixed;
+  top: 0;
+  z-index: 11;
+}
+
+/* home======================================================= */
+.jumbo-color {
+  background-color: #2e3267;
+  padding: 1.8rem;
+  border-radius: 2rem;
+  transition: all 400ms ease;
+}
+
+
+/* contact ========================================================= */

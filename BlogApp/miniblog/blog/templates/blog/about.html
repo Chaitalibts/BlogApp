@@ -1,0 +1,147 @@
+{% extends 'blog/base.html' %} {% load static %} {% block content %}
+
+<div class="col-sm-10">
+  <section>
+    <div
+      class="container"
+      style="display: grid; grid-template-columns: 60% 40%; gap:2rem"
+    >
+      <div class="p-2">
+        <div
+          style="
+            margin-top: 7rem;
+            background-color:#2e3267;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 45% 55%;
+            gap: 4rem;
+            height: 25rem;
+            width:48rem;
+            margin: 7rem auto;
+            border-radius:10%
+          "
+        >
+          <aside
+            style="
+              position: relative;
+              bottom: 5rem;
+              justify-content: center;
+              align-items: center;
+              height:25rem;
+              width:25rem;
+            "
+          >
+            <img src="{% static 'blog/images/home.jpg' %}" alt="" style="width:100%;height:100%;border-radius:100%;">
+          </aside>
+
+            <div style="
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-right: 4rem;
+            text-align:center;
+          " class="m-2 p-5">
+          <h3>Join millions of others</h3>
+           <p>
+            Find out which posts are a hit with BlogIt’s built-in analytics.</p>
+          <a href="{% url 'dashboard' %}" class="btn btn-danger">Get Started</a>
+        </div>
+        
+        </div>
+
+      
+        
+      </div>
+      
+      <div class="m-5 p-4">
+        <h1>Know your audience</h1>
+        <p>
+          Find out which posts are a hit with Blogger’s built-in analytics. You’ll see where your audience is coming from and what they’re interested in. You can even connect your blog directly to Google Analytics for a more detailed look.
+        </p>
+
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+          "
+        >
+          <article
+            style="
+              background-color: #2e3267;
+              padding: 2rem;
+              border-radius: 2rem;
+              text-align: center;
+              transition: all 400ms ease;
+            "
+          >
+            <span
+              style="
+                background: #f75842;
+                padding: 1rem;
+                border-radius: 1rem;
+                display: inline-block;
+                margin-bottom: 2rem;
+                font-size: 1.2rem;
+              "
+            >
+              <i class="fa-solid fa-pen"></i>
+            </span>
+            <h3>Design</h3>
+          </article>
+
+          <article
+            style="
+              background-color: #2e3267;
+              padding: 2rem;
+              border-radius: 2rem;
+              text-align: center;
+              transition: all 400ms ease;
+            "
+          >
+            <span
+              style="
+                background: #f7c94b;
+                padding: 1rem;
+                border-radius: 1rem;
+                display: inline-block;
+                margin-bottom: 2rem;
+                font-size: 1.2rem;
+              "
+            >
+              <i class="fa-solid fa-user"></i>
+            </span>
+            <h3>Get a domain</h3>
+          </article>
+
+          <article
+            style="
+              background-color: #2e3267;
+              padding: 2rem;
+              border-radius: 2rem;
+              text-align: center;
+              transition: all 400ms ease;
+            "
+          >
+            <span
+              style="
+                background: #00bf8e;
+                padding: 1rem;
+                border-radius: 1rem;
+                display: inline-block;
+                margin-bottom: 2rem;
+                font-size: 1.2rem;
+              "
+            >
+              <i class="fa-solid fa-trophy"></i>
+            </span>
+            <h3>Earn money</h3>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /* ===============CATEGORIES End ================ */ -->
+
+
+{% endblock content %}
